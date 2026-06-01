@@ -1,0 +1,160 @@
+/* ============================================================
+   Header.css — Thanh thông tin phía trên Navbar (Phương án 2)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+.header-wrap {
+    /* 🟢 ĐÃ SỬA: Đổi từ nền đen tối sang nền Xanh rêu thuần chay cao cấp */
+    background: #0d4a3b; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ── Liên hệ ── */
+.header-contact a {
+    /* 🟢 ĐÃ SỬA: Tăng độ tương phản chữ lên màu trắng tinh để dễ đọc trên nền xanh */
+    color: #ffffff; 
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+    margin-right: 18px;
+    font-weight: 500;
+}
+.header-contact a:last-child { margin-right: 0; }
+/* 🟢 ĐÃ SỬA: Hover đổi sang màu xanh lime sáng cực kỳ thu hút */
+.header-contact a:hover { color: #a3e635; } 
+/* 🟢 ĐÃ SỬA: Icon đổi sang màu xanh chuối sáng để bật tone rõ rệt */
+.header-contact i { font-size: 12px; color: #a3e635; } 
+
+/* ── Mạng xã hội ── */
+.header-socials {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 20px;
+}
+.header-social-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    /* 🟢 ĐÃ SỬA: Tạo khối box mờ nhẹ tinh tế trên nền xanh */
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; 
+    font-size: 11px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+/* 🟢 ĐÃ SỬA: Hover nút MXH đổi sang màu Đỏ rượu điểm nhấn */
+.header-social-btn:hover {
+    background: #880e4f; 
+    border-color: #880e4f;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* ── Tài khoản & Người dùng ── */
+.header-account {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.header-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    /* 🟢 ĐÃ SỬA: Avatar đổi sang màu Đỏ rượu Burgundy cực kỳ sang trọng */
+    background: #880e4f; 
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-username {
+    /* 🟢 ĐÃ SỬA: Tăng độ tương phản tên tài khoản lên chữ trắng */
+    color: #ffffff; 
+    font-size: 12.5px;
+    font-weight: 600; /* Tăng độ đậm để text nét hơn */
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── Nút Đăng xuất ── */
+.header-logout-btn {
+    background: none;
+    /* 🟢 ĐÃ SỬA: Viền trắng mờ tinh tế */
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 6px;
+    color: #ffffff; 
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+/* 🟢 ĐÃ SỬA: Hover đăng xuất đổi sang màu đỏ rượu mờ nhẹ nhàng */
+.header-logout-btn:hover {
+    background: rgba(136, 14, 79, 0.4); 
+    border-color: #880e4f;
+    color: #fff;
+}
+
+/* ── Nút Đăng nhập / Đăng ký khi chưa đăng nhập ── */
+.header-auth-link {
+    color: #ffffff; 
+    font-size: 12.5px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.2s;
+}
+.header-auth-link:hover {
+    color: #0d4a3b; /* Chữ chuyển xanh rêu */
+    background: #ffffff; /* Nền trắng tinh khôi bật lên tương phản cực mạnh */
+    border-color: #ffffff;
+    text-decoration: none;
+}
+
+/* Biến thể nút Đăng ký (Bật tone màu xanh cỏ sáng) */
+.header-auth-link.register {
+    border-color: rgba(163, 230, 21, 0.5);
+    color: #a3e635;
+}
+.header-auth-link.register:hover {
+    background: #a3e635;
+    color: #0d4a3b;
+    border-color: #a3e635;
+    font-weight: 600;
+}
+
+.header-divider {
+    width: 1px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.2);
+}
