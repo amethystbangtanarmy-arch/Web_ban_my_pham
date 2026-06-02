@@ -74,6 +74,12 @@ namespace BaseCore.AuthService.Controllers
 
             try
             {
+                // Check if username already exists to avoid DB unique constraint errors
+                var existing = await _userService.GetByUsername(request.Username);
+                if (existing != null)
+                {
+                    return BadRequest(new { message = "Registration failed: Username already exists" });
+                }
                 var user = new BaseCore.Entities.User
                 {
                     UserName = request.Username,
@@ -89,7 +95,10 @@ namespace BaseCore.AuthService.Controllers
             }
             catch (System.Exception ex)
             {
-                return BadRequest(new { message = "Registration failed: " + ex.Message });
+                // Log the exception for debugging in Development
+                System.Console.WriteLine("Registration exception: " + ex.ToString());
+                var inner = ex.InnerException != null ? (" Inner: " + ex.InnerException.Message) : string.Empty;
+                return BadRequest(new { message = "Registration failed: " + ex.Message + inner });
             }
         }
     }
