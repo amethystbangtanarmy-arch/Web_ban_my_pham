@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Oe5mK/jkeJ6znC20uOSq52RdfUmP8KzQH4MljPT3WoI=",
+  "Source": "BaseCore.ApiGateway",
+  "BasePath": "_content/BaseCore.ApiGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

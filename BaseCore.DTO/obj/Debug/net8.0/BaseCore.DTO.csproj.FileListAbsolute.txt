@@ -1,0 +1,13 @@
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\bin\Debug\net8.0\BaseCore.DTO.deps.json
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\bin\Debug\net8.0\BaseCore.DTO.dll
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\bin\Debug\net8.0\BaseCore.DTO.pdb
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\obj\Debug\net8.0\BaseCore.DTO.csproj.AssemblyReference.cache
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\obj\Debug\net8.0\BaseCore.DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\obj\Debug\net8.0\BaseCore.DTO.AssemblyInfoInputs.cache
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\obj\Debug\net8.0\BaseCore.DTO.AssemblyInfo.cs
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\obj\Debug\net8.0\BaseCore.DTO.csproj.CoreCompileInputs.cache
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\obj\Debug\net8.0\BaseCore.DTO.sourcelink.json
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\obj\Debug\net8.0\BaseCore.DTO.dll
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\obj\Debug\net8.0\refint\BaseCore.DTO.dll
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\obj\Debug\net8.0\BaseCore.DTO.pdb
+D:\THUC_TAP_NHOM\Web_ban_my_pham\BaseCore.DTO\obj\Debug\net8.0\ref\BaseCore.DTO.dll
