@@ -1,0 +1,109 @@
+/* ============================================================
+   ContactWidget.css — Nút liên hệ nổi góc phải màn hình
+   ============================================================ */
+
+.contact-widget-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ── KHỐI CÁC NÚT MẠNG XÃ HỘI (ZALO, MESSENGER) ── */
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.8);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.contact-buttons.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.contact-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+
+.contact-btn:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Màu đặc trưng của các app */
+.contact-btn.messenger { background: linear-gradient(45deg, #00B2FF, #006AFF); }
+.contact-btn.phone { background: #880e4f; } /* Đỏ rượu vang của bạn */
+.contact-btn.zalo { background: #0068FF; font-weight: bold; font-family: sans-serif; }
+.zalo-text { font-size: 14px; font-weight: 700; letter-spacing: 0.5px; }
+
+
+/* ── NÚT BẤM CHÍNH (MAIN BUTTON) ── */
+.main-contact-btn-wrap {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Hiệu ứng sóng âm tỏa ra (Pulse Ring) */
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0d4a3b; /* Xanh rêu thương hiệu */
+    border-radius: 50%;
+    z-index: 1;
+    animation: pulse 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.main-contact-btn {
+    position: relative;
+    z-index: 2;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #0d4a3b; /* Xanh rêu thương hiệu */
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(13, 74, 59, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Khi mở menu ra thì đổi nút thành nút X màu đỏ */
+.main-contact-btn.active {
+    background-color: #880e4f; 
+    transform: rotate(90deg);
+}
+
+/* Keyframes cho hiệu ứng sóng âm */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    70% { transform: scale(1.6); opacity: 0; }
+    100% { transform: scale(1.6); opacity: 0; }
+}
