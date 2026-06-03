@@ -1,0 +1,283 @@
+/* ============================================================
+   Dashboard.css — Style riêng cho trang Dashboard Admin
+   Theo phong cách InApp Inventory Dashboard
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ── Font & Reset ── */
+.dash-page,
+.dash-page *:not(i),
+.dash-modal,
+.dash-modal *:not(i) {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ────────────────────────────────────────────
+   PAGE HEADER
+──────────────────────────────────────────── */
+.dash-page .dash-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1a1a2e;
+    letter-spacing: -0.5px;
+    margin: 0 0 2px;
+}
+
+.dash-page .dash-subtitle {
+    font-size: 13px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+/* ────────────────────────────────────────────
+   STAT CARDS ROW 1 (màu nền pastel như ảnh)
+──────────────────────────────────────────── */
+.dash-stat-card {
+    border-radius: 14px;
+    padding: 20px 22px;
+    position: relative;
+    border: none !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    overflow: hidden;
+}
+
+.dash-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.10) !important;
+}
+
+.dash-stat-card .stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.dash-stat-card .stat-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.dash-stat-card .stat-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.dash-stat-card .stat-change {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Màu nền theo AdminLTE gốc — GIỮ NGUYÊN */
+.dash-stat-card.card-info    { background-color: #d1ecf1; }
+.dash-stat-card.card-success { background-color: #d4edda; }
+.dash-stat-card.card-warning { background-color: #fff3cd; }
+.dash-stat-card.card-danger  { background-color: #f8d7da; }
+.dash-stat-card.card-purple  { background-color: #e8d5f5; }
+
+.dash-stat-card.card-info    .stat-icon { background: rgba(23,162,184,0.18); color: #0c7a8d; }
+.dash-stat-card.card-success .stat-icon { background: rgba(40,167,69,0.18);  color: #1a6b2e; }
+.dash-stat-card.card-warning .stat-icon { background: rgba(255,193,7,0.28);  color: #856404; }
+.dash-stat-card.card-danger  .stat-icon { background: rgba(220,53,69,0.18);  color: #8b1a26; }
+.dash-stat-card.card-purple  .stat-icon { background: rgba(111,66,193,0.18); color: #5a2e9e; }
+
+.dash-stat-card .stat-footer {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7280;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.15s;
+}
+
+.dash-stat-card .stat-footer:hover { color: #f97316; text-decoration: none; }
+
+/* ────────────────────────────────────────────
+   STAT CARDS ROW 2 (nền trắng, icon phải)
+──────────────────────────────────────────── */
+.dash-metric-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 22px 24px;
+    border: 1px solid #f0f0f0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dash-metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08) !important;
+}
+
+.dash-metric-card .metric-value {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1;
+}
+
+.dash-metric-card .metric-label {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 4px;
+    font-weight: 400;
+}
+
+.dash-metric-card .metric-icon {
+    font-size: 28px;
+    opacity: 0.6;
+}
+
+.dash-metric-card .metric-change {
+    font-size: 12.5px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+.dash-metric-card .metric-change.up   { color: #16a34a; }
+.dash-metric-card .metric-change.down { color: #dc2626; }
+
+.dash-metric-card .metric-view {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #f97316;
+    text-decoration: none;
+    float: right;
+    margin-top: 16px;
+}
+
+.dash-metric-card .metric-view:hover { color: #ea6c0a; text-decoration: underline; }
+
+/* ────────────────────────────────────────────
+   CARD CHUNG (biểu đồ, quick actions)
+──────────────────────────────────────────── */
+.dash-card {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #f0f0f0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+    overflow: hidden;
+}
+
+.dash-card .dash-card-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dash-card .dash-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0;
+}
+
+.dash-card .dash-card-body { padding: 20px; }
+
+/* ────────────────────────────────────────────
+   SELECT / BADGE nhỏ
+──────────────────────────────────────────── */
+.dash-page .dash-select {
+    font-size: 13px; /* Tăng size lên 1 tí cho dễ nhìn */
+    border-radius: 8px;
+    border: 1px solid #f8bbd0; /* 🟢 Viền màu hồng nhạt */
+    padding: 6px 30px 6px 12px;
+    color: #880e4f; /* 🟢 Chữ màu đỏ mận */
+    background-color: #fff;
+    cursor: pointer;
+   -webkit-appearance: none; /* Dành cho Chrome, Safari */
+    appearance: none;
+    /* 🟢 Đã đổi màu mũi tên (fill) sang màu hồng #d81b60 (%23d81b60) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23d81b60'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Thêm hiệu ứng khi người dùng click vào ô Select */
+.dash-page .dash-select:focus {
+    outline: none;
+    border-color: #d81b60;
+    box-shadow: 0 0 0 3px rgba(216, 27, 96, 0.1); /* Tỏa hào quang màu hồng */
+}
+/* ────────────────────────────────────────────
+   QUICK ACTIONS
+──────────────────────────────────────────── */
+.dash-quick-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 12px;
+    border-radius: 12px;
+    border: 1.5px solid #e5e7eb;
+    background: #fafafa;
+    color: #374151;
+    text-decoration: none !important;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.15s ease;
+    gap: 8px;
+}
+
+.dash-quick-btn i { font-size: 22px; }
+
+.dash-quick-btn:hover {
+    border-color: #f97316;
+    background: #fff7ed;
+    color: #f97316 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249,115,22,0.15);
+    text-decoration: none;
+}
+
+/* ────────────────────────────────────────────
+   BREADCRUMB & SPINNER
+──────────────────────────────────────────── */
+.dash-page .breadcrumb {
+    font-size: 12px;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.dash-page .spinner-border { color: #f97316 !important; }
+
+/* ────────────────────────────────────────────
+   RECHARTS OVERRIDES
+──────────────────────────────────────────── */
+.dash-page .recharts-cartesian-axis-tick text {
+    font-size: 11px !important;
+    fill: #9ca3af !important;
+}
+
+.dash-page .recharts-legend-item-text {
+    font-size: 12px !important;
+    color: #6b7280 !important;
+}
+
+/* ────────────────────────────────────────────
+   RESPONSIVE
+──────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .dash-stat-card .stat-value { font-size: 22px; }
+    .dash-metric-card .metric-value { font-size: 20px; }
+}
